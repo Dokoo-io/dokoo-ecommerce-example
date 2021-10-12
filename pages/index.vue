@@ -9,9 +9,9 @@
         class="flex flex-col shadow my-4 w-1/2 md:w-1/4"
       >
         <!-- Article Image -->
-        <nuxt-link :to="`/articles/${item.id}`" class="hover:opacity-75">
+        <a href="#" class="hover:opacity-75">
           <img class="w-full" width="400" height="400" :src="`${item.attributes.cover}?transform=true&width=400&height=400&format=webp`" :alt="item.attributes.title">
-        </nuxt-link>
+        </a>
         <div class="bg-white flex flex-col justify-start px-6 pt-6">
           <a href="#" class="text-lg font-bold hover:text-gray-700 pb-4">{{ item.attributes.label }}</a>
         </div>
