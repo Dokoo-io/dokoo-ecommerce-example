@@ -7,6 +7,7 @@
           <a class="font-bold text-blue-500 uppercase hover:text-blue-800 text-5xl" href="/">
             My Cooking blog
           </a>
+          <button class="snipcart-checkout">Click here to checkout</button>
         </div>
       </div>
     </header>

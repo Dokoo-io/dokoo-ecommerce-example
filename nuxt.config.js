@@ -35,18 +35,29 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/snipcart'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@dokoo/nuxt'
   ],
+  snipcart: {
+    // Options available
+    // version: /* not required default value is v3.0.23 */,
+    key: 'YThjYWM4MGQtYTk5My00MTg5LWFhYzEtNGYxZTkxZDBlZTIwNjM3NTI4MDczMzE5MDcxMzQw', // /* required https://app.snipcart.com/dashboard/account/credentials */,
+    attributes: [
+      ['data-config-modal-style', 'side'],
+      ['data-currency', 'eur']
+    ]
+    // locales: {} /* not required */
+  },
   dokoo: {
     clients: {
       myCookingBlog: {
-        spaceId: '8e458923-64c8-402e-a6a5-48b1be4677ff',
-        token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5ZWxsYXctY21zIiwianRpIjoiZWNjZDNlZmItYWE5MC00MTFmLWE4OTEtYmE3MjkxNWJhZmY4Iiwic3ViIjoidTI4UFZTQ0ZwME45dkt2SjQzMnlLSHd4WUVFMiIsImlhdCI6MTYzMTYyOTkxNX0.lkeyrQ6CCj5Tl_rBhovKLsm2o-9z_WEPp_ITA078_P8'
+        spaceId: '19c56dd2-f395-48d1-8f18-f41e38e2a31c',
+        token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5ZWxsYXctY21zIiwianRpIjoiMzI4YWM0MGUtMjlmMy00YTViLWIxMTQtOTIzYWNjMTYxYzQzIiwic3ViIjoidTI4UFZTQ0ZwME45dkt2SjQzMnlLSHd4WUVFMiIsImlhdCI6MTYzNDAyOTUwNn0.1ZFsgRMiufUA7V8J3Vn4kSYwPaHGrwnVT8oqlEUbVhg'
       }
     }
   },

@@ -3,18 +3,30 @@
     <div
       v-for="item in feed.hits"
       :key="item.id"
+      class="flex flex-wrap"
     >
       <article
-        class="flex flex-col shadow my-4"
+        class="flex flex-col shadow my-4 w-1/2 md:w-1/4"
       >
         <!-- Article Image -->
         <nuxt-link :to="`/articles/${item.id}`" class="hover:opacity-75">
-          <img class="w-full" width="800" height="350" :src="`${item.attributes.cover}?transform=true&width=800&height=350&format=webp`" :alt="item.attributes.title">
+          <img class="w-full" width="400" height="400" :src="`${item.attributes.cover}?transform=true&width=400&height=400&format=webp`" :alt="item.attributes.title">
         </nuxt-link>
-        <div class="bg-white flex flex-col justify-start p-6">
-          <a href="#" class="text-blue-700 text-sm font-bold uppercase pb-4">Food</a>
-          <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">{{ item.attributes.title }}</a>
-          <div style="white-space: pre-wrap; height: 50px;" class="mb-3" v-text="item.attributes.description" />
+        <div class="bg-white flex flex-col justify-start px-6 pt-6">
+          <a href="#" class="text-lg font-bold hover:text-gray-700 pb-4">{{ item.attributes.label }}</a>
+        </div>
+        <div class="bg-white flex justify-between px-6">
+          <a href="#" class="text-lg font-bold hover:text-gray-700 pb-4">{{ item.attributes.price }}€</a>
+          <button
+            class="snipcart-add-item"
+            :data-item-id="item.id"
+            :data-item-price="item.attributes.price"
+            :data-item-url="`/`"
+            :data-item-image="`${item.attributes.cover}?transform=true&width=400&height=400&format=webp`"
+            :data-item-name="item.attributes.label"
+          >
+            Add to cart
+          </button>
         </div>
       </article>
     </div>
@@ -29,7 +41,7 @@ export default {
     }
   },
   async fetch () {
-    const feed = this.$dokoo.myCookingBlog.feeds.getFeed('0dacdbc8-9ec9-4418-b5e5-796968550a87')
+    const feed = this.$dokoo.myCookingBlog.feeds.getFeed('36f9a85c-fff0-43ba-acc4-0cde53c95af6')
     this.feed = await feed.get()
   }
 }
