@@ -15,8 +15,8 @@
         <div class="bg-white flex flex-col justify-start px-6 pt-6">
           <a href="#" class="text-lg font-bold hover:text-gray-700 pb-4">{{ item.attributes.label }}</a>
         </div>
-        <div class="bg-white flex justify-between px-6">
-          <a href="#" class="text-lg font-bold hover:text-gray-700 pb-4">{{ item.attributes.price }}€</a>
+        <div class="bg-white flex justify-between items-center px-6 pb-4">
+          <a href="#" class="text-lg font-bold hover:text-gray-700">{{ item.attributes.price }}€</a>
           <button
             class="snipcart-add-item"
             :data-item-id="item.id"
@@ -25,7 +25,9 @@
             :data-item-image="`${item.attributes.cover}?transform=true&width=400&height=400&format=webp`"
             :data-item-name="item.attributes.label"
           >
-            Add to cart
+            <span class="material-icons md-24">
+              add_shopping_cart
+            </span>
           </button>
         </div>
       </article>

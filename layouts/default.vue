@@ -2,13 +2,20 @@
   <div class="bg-white font-family-karla">
     <!-- Text Header -->
     <header class="w-full bg-gray-100">
-      <div class="container mx-auto">
+      <div class="container mx-auto flex justify-between">
         <div class="flex flex-col items-center py-12">
-          <a class="font-bold text-blue-500 uppercase hover:text-blue-800 text-5xl" href="/">
-            My Cooking blog
-          </a>
-          <button class="snipcart-checkout">Click here to checkout</button>
+          <h1>
+            <a class="font-bold text-blue-500 uppercase hover:text-blue-800 text-5xl" href="/">
+              My E-Commerce
+            </a>
+          </h1>
         </div>
+        <button class="snipcart-checkout flex items-center">
+          <span class="material-icons text-4xl text-blue-500">
+            shopping_cart
+          </span>
+          <span class="snipcart-items-count inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">0</span>
+        </button>
       </div>
     </header>
 
