@@ -60,8 +60,7 @@ export default {
   dokoo: {
     clients: {
       myCookingBlog: {
-        spaceId: '19c56dd2-f395-48d1-8f18-f41e38e2a31c',
-        token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5ZWxsYXctY21zIiwianRpIjoiMzI4YWM0MGUtMjlmMy00YTViLWIxMTQtOTIzYWNjMTYxYzQzIiwic3ViIjoidTI4UFZTQ0ZwME45dkt2SjQzMnlLSHd4WUVFMiIsImlhdCI6MTYzNDAyOTUwNn0.1ZFsgRMiufUA7V8J3Vn4kSYwPaHGrwnVT8oqlEUbVhg'
+        token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5ZWxsYXctY21zIiwianRpIjoiMTVmODc2NjEtYzQ1NC00YzRmLWI2NjItNGMwNDM2MTE5ZTcwIiwic3ViIjoidTI4UFZTQ0ZwME45dkt2SjQzMnlLSHd4WUVFMiIsInNwYWNlX2lkIjoiMTljNTZkZDItZjM5NS00OGQxLThmMTgtZjQxZTM4ZTJhMzFjIiwiaWF0IjoxNjQ1MDg2ODAwfQ.p9B3-tzwZh4G4ZAmGRF6gE92XTyCwBYeQ9dO5PbD38c'
       }
     }
   },
